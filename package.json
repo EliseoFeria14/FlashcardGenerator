@@ -1,0 +1,25 @@
+{
+  "name": "flashcard-generator",
+  "version": "1.0.0",
+  "description": "inquirer and object constructors to build flash cards to use to study",
+  "main": "flashCards.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliseoFeria14/flashcard-generator.git"
+  },
+  "keywords": [
+    "flashcards"
+  ],
+  "author": "Eliseo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliseoFeria14/flashcard-generator/issues"
+  },
+  "homepage": "https://github.com/EliseoFeria14/flashcard-generator#readme",
+  "dependencies": {
+    "inquirer": "^3.2.3"
+  }
+}
