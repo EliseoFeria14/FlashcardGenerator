@@ -20,14 +20,14 @@ var BasicCard = function(Front, Back){
 //exporting BasicCard constructor
 module.exports = BasicCard;
 
-//Tests
+// //Tests
 
-var flash = new BasicCard("Who created the assembly line?","Henry Ford");
+// var flash = new BasicCard("Who created the assembly line?","Henry Ford");
 
-flash.displayFront();
-flash.displayBack();
-//Testing scope safe construction
-var flash2 = BasicCard('Who created "My Neighbor Totoro"?', "Hayao Miyazaki");
+// flash.displayFront();
+// flash.displayBack();
+// //Testing scope safe construction
+// var flash2 = BasicCard('Who created "My Neighbor Totoro"?', "Hayao Miyazaki");
 
-flash2.displayFront();
-flash2.displayBack();
+// flash2.displayFront();
+// flash2.displayBack();
