@@ -26,21 +26,23 @@ var ClozeCard= function(Front, Back){
 			//console.log(repl);
 			//blank();
 			var partialString = string.replace(repl,"_____________");
-			console.log(partialString);
+			console.log("Partial:\n" +partialString);
 		}
 	}else{
 		return new ClozeCard(Front, Back);
 	}
-}
+};
 
+//exporting ClozeCard constructor
+module.exports = ClozeCard; 
 //Tests
 //checking when strings are like
-var flash = new ClozeCard("Samsung is a Korean Electronics Brand", "Samsung");
+// var flash = new ClozeCard("Samsung is a Korean Electronics Brand", "Samsung");
 
-flash.displayFull();
-flash.displayCloze();
-flash.checkStrings();
-flash.displayPartial();
+// flash.displayFull();
+// flash.displayCloze();
+// flash.checkStrings();
+// flash.displayPartial();
 
 //checking when strings aren't like
 

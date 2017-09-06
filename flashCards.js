@@ -2,6 +2,9 @@
 var inquirer = require("inquirer");
 //Load basicCard.js
 var BasicCard= require("./basicCard.js");
+//Load clozedCard.js
+var ClozedCard = require("./clozedCard.js");
+
 ///variable to save input from inquirer
 var front = "";
 var back = "";
@@ -22,6 +25,8 @@ inquirer.prompt([
 		
 	}else{
 		console.log("You chose " + card.flashCardType);
+
+		getClozeInfo();
 	}
 });
 
@@ -48,4 +53,28 @@ function getCardInfo(){
 		basic.displayFront();
 		basic.displayBack();
 	});
+};
+
+function getClozeInfo(){
+	inquirer.prompt([
+		{
+			type: "input",
+			name: "front",
+			message: "What will be on the front of the card?"
+		},
+		{
+			type: "input",
+			name: "back",
+			message: "What will be on the back of the card?"
+		}
+	]).then(function(Info){
+		var front = Info.front;
+		var back = Info.back;
+
+		var cloze = new ClozedCard(front, back);
+		cloze.displayFull();
+		cloze.displayCloze();
+		cloze.displayPartial();
+	});
+
 };
