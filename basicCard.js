@@ -4,19 +4,19 @@ var BasicCard = function(Front, Back){
 	if (this instanceof BasicCard){
 		this.front = Front;
 		this.back = Back;
-		this.displayFront = function(){
-			console.log("Front:\n" +this.front);
-		};
-		this.displayBack = function(){
-			console.log("Back:\n" +this.back);
-		};
+
 	}else{
 		return new BasicCard(Front, Back);
-	}
-	
-
+	}	
 };
 
+BasicCard.prototype.displayFront = function(){
+	console.log("Front:\n" +this.front+"\n");
+};
+
+BasicCard.prototype.displayBack = function(){
+	console.log("Back:\n" +this.back+"\n");
+};
 //exporting BasicCard constructor
 module.exports = BasicCard;
 

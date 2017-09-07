@@ -19,12 +19,12 @@ inquirer.prompt([
 	},
 ]).then(function(card){
 	if(card.flashCardType === "Basic"){
-		console.log("You chose "+ card.flashCardType)
+		console.log("You chose "+ card.flashCardType+"\n")
 
 		getCardInfo();
 		
 	}else{
-		console.log("You chose " + card.flashCardType);
+		console.log("You chose " + card.flashCardType+"\n");
 
 		getClozeInfo();
 	}

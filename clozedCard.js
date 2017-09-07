@@ -5,32 +5,28 @@ var ClozeCard= function(Front, Back){
 	if(this instanceof ClozeCard){
 		this.front = Front;
 		this.back = Back;
-		this.displayFull = function () {
-			console.log("Full:\n"+ this.front);
-		};
-		this.displayCloze = function () {
-			console.log("Cloze:\n" + this.back);
-		};
-		this.checkStrings = function() {
-			if(this.front.indexOf(this.back) >= 0){
-				console.log("Cloze is part of Full");
-			}else{
-				console.log("Cloze is not part of Full. Make sure cloze matches with full");
-			}
-		};
-		this.displayPartial = function () {
-			var string = this.front;
-			//console.log(string);
-			//blank();
-			var repl = this.back;
-			//console.log(repl);
-			//blank();
-			var partialString = string.replace(repl,"_____________");
-			console.log("Partial:\n" +partialString);
-		}
 	}else{
 		return new ClozeCard(Front, Back);
 	}
+};
+
+ClozeCard.prototype.displayFull = function () {
+	console.log("Full:\n"+ this.front+"\n");
+};
+
+ClozeCard.prototype.displayCloze = function () {
+	console.log("Cloze:\n" + this.back+"\n");
+};
+
+ClozeCard.prototype.displayPartial = function () {
+	var string = this.front;
+	//console.log(string);
+	//blank();
+	var repl = this.back;
+	//console.log(repl);
+	//blank();
+	var partialString = string.replace(repl,"_____________");
+	console.log("Partial:\n" +partialString+"\n");
 };
 
 //exporting ClozeCard constructor
