@@ -70,11 +70,18 @@ function getClozeInfo(){
 	]).then(function(Info){
 		var front = Info.front;
 		var back = Info.back;
+		
+		if(front.indexOf(back) >= 0){
+			console.log("Cloze is part of Full");
+			var cloze = new ClozedCard(front, back);
+			cloze.displayFull();
+			cloze.displayCloze();
+			cloze.displayPartial();
+		}else{
+			console.log("Cloze is not part of Full. Make sure cloze matches with full");
+			getClozeInfo();
+		}
 
-		var cloze = new ClozedCard(front, back);
-		cloze.displayFull();
-		cloze.displayCloze();
-		cloze.displayPartial();
 	});
 
 };
