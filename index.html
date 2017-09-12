@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Flash Card Generator</title>
+	  <!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css"  media="screen,projection"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- javascript and materialize libraries imported -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+	<script type="text/javascript" src= "./assets/javascript/flashcard.js"></script>
+</head>
+<body>
+<div class="row">
+	<div class="col s12 card-panel blue lighten-5">
+		<h1 class=" center-align">
+			<span class= "blue-text text-darken-2">USE THE FORM TO CREATE FLASH CARDS</span>
+		</h1>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col s12 m4 l3  card-panel grey lighten-5">
+		<h5 class="center-align">
+		Click the button to choose the type of flashcard you want to make
+		</h5>
+		<div class="row center-align">
+			<a class="waves-effect waves-light btn-large flash" value= "basic">Basic</a>
+			<a class="waves-effect waves-light btn-large flash" value= "cloze">Cloze</a>
+		</div>
+		<h5 class="center-align">
+		Submit filled out form to create flashcard
+		</h5>
+		<div class="row" id="form">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s12">
+						<input placeholder="Enter text here" type="text" id= "front" class="validate">
+						<label for="front">Front of card</label>
+					</div>
+						<div class="input-field col s12">
+						<input placeholder="Enter text here" type="text" id= "back" class="validate">
+						<label for="back">Back of card</label>
+					</div>
+					<div class="row center-align">
+						<a class="waves-effect waves-light btn-large" id= "formSubmit" value= "formSubmit">Submit</a>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<div class="col s12 m8 l9 card-panel blue-grey lighten-3 " id= "display">
+		<div class="row">
+			<h4 class="center-align white-text">
+			FLASHCARDS
+			</h4>
+		</div>
+		<div class="row">
+			<div class="col s12 m6">
+				<div class="card blue-grey darken-1">
+					<div class="card-content white-text">
+						<span class="card-title activator">Card Title</span>
+						<p class="activator">I am a very simple card. I am good at containing small bits of information.
+						I am convenient because I require little markup to use effectively.</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="card blue-grey darken-1">
+					<div class="card-content white-text">
+						<span class="card-title activator">Card Title</span>
+						<p class="activator">I am a very simple card. I am good at containing small bits of information.
+						I am convenient because I require little markup to use effectively.</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="card blue-grey darken-1">
+					<div class="card-content white-text">
+						<span class="card-title activator">Card Title</span>
+						<p class="activator">I am a very simple card. I am good at containing small bits of information.
+						I am convenient because I require little markup to use effectively.</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="card blue-grey darken-1">
+					<div class="card-content white-text">
+						<span class="card-title activator">Card Title</span>
+						<p class="activator">I am a very simple card. I am good at containing small bits of information.
+						I am convenient because I require little markup to use effectively.</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="card blue-grey darken-1">
+					<div class="card-content white-text">
+						<span class="card-title activator">Card Title</span>
+						<p class="activator">I am a very simple card. I am good at containing small bits of information.
+						I am convenient because I require little markup to use effectively.</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="card blue-grey darken-1">
+					<div class="card-content white-text">
+						<span class="card-title activator">Card Title</span>
+						<p class="activator">I am a very simple card. I am good at containing small bits of information.
+						I am convenient because I require little markup to use effectively.</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>	
+			</div>
+			<div class='col s12 m6'><div class='card blue-grey darken1'><div class='card-content white-text activator'><span class='card-title'>Card Title</span><p>sample text</p></div><div class='card-reveal'><span class ='card-title grey-text text-darken-4'>Card Title<i class='material-icons right'>close</i></span><p>sample text revealed</p></div></div></div>
+		</div>
+	</div>
+</div>
+
+<!--Import jQuery before materialize.js-->
+
+</body>
+</html>

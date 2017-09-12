@@ -1,0 +1,20 @@
+Front: What is the capital of North Carolina?
+Back: Raleigh
+_____________________
+
+Front: What is the Capital of Uruguay?
+Back: Montevideo
+_____________________
+
+Front: What is the Capital of Uruguay?
+Back: Montevideo
+_____________________
+
+Front: What is the genus that dogs and wolves belong to?
+Back: Canis
+_____________________
+
+Front: The Beatles are from where?
+Back: England
+_____________________
+

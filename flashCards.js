@@ -5,6 +5,7 @@ var BasicCard= require("./basicCard.js");
 //Load clozedCard.js
 var ClozedCard = require("./clozedCard.js");
 
+var Logger = require("./logger.js");
 ///variable to save input from inquirer
 var front = "";
 var back = "";
@@ -14,19 +15,23 @@ inquirer.prompt([
 	{
 		type: "list",
 		name: "flashCardType",
-		message: "What kind of FlashCard do you want to make?",
-		choices: ["Basic","Cloze"]
+		message: "What would you like to do?",
+		choices: ["Make Basic","Make Cloze","View Cards"]
 	},
 ]).then(function(card){
-	if(card.flashCardType === "Basic"){
+	if(card.flashCardType === "Make Basic"){
 		console.log("You chose "+ card.flashCardType+"\n")
 
 		getCardInfo();
 		
-	}else{
+	}else if(card.flashCardType === "Make Cloze"){
 		console.log("You chose " + card.flashCardType+"\n");
 
 		getClozeInfo();
+	}else{
+		console.log("You chose " + card.flashCardType+"\n");
+
+		readLog();
 	}
 });
 
@@ -52,6 +57,7 @@ function getCardInfo(){
 		var basic = new BasicCard(front, back);
 		basic.displayFront();
 		basic.displayBack();
+		basic.pushBasicLog();
 	});
 };
 
@@ -77,6 +83,7 @@ function getClozeInfo(){
 			cloze.displayFull();
 			cloze.displayCloze();
 			cloze.displayPartial();
+			cloze.pushClozeLog();
 		}else{
 			console.log("Cloze is not part of Full. Make sure cloze matches with full");
 			getClozeInfo();
@@ -84,4 +91,26 @@ function getClozeInfo(){
 
 	});
 
+};
+
+function readLog(){
+	inquirer.prompt({
+		type: "list",
+		name: "logtype",
+		message: "Which Flashcards would you like to view?",
+		choices: ["Basic","Cloze","All"]
+	}).then(function(log){
+		
+
+		if(log.logtype === "Basic"){
+			logger = new Logger();
+			logger.readBasic();
+		}else if(log.logtype === "Cloze"){
+			logger = new Logger();
+			logger.readCloze();
+		}else{
+			logger = new Logger();
+			logger.readAll();
+		}
+	});
 };

@@ -1,0 +1,16 @@
+Front: Buenos Aires is the capital of Argentina
+Cloze: Buenos Aires
+Partial: _________ is the capital of Argentina
+
+_____________________
+
+Front: Samsung is a Korean electronics brand.
+Cloze: Korean
+Partial: Samsung is a _________ electronics brand.
+_____________________
+
+Front: Henry Ford founded Ford Motor Company in Michigan.
+Cloze: Michigan
+Partial: Henry Ford founded Ford Motor Company in _________.
+_____________________
+

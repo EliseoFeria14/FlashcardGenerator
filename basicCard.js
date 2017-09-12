@@ -1,3 +1,5 @@
+var Logger = require("./logger.js");
+
 // constructor to build basic flash cards
 
 var BasicCard = function(Front, Back){
@@ -17,6 +19,11 @@ BasicCard.prototype.displayFront = function(){
 BasicCard.prototype.displayBack = function(){
 	console.log("Back:\n" +this.back+"\n");
 };
+
+BasicCard.prototype.pushBasicLog = function(){
+	var logger = new Logger();
+	logger.pushBasic(this.front, this.back);
+}
 //exporting BasicCard constructor
 module.exports = BasicCard;
 
